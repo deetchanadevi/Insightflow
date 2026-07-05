@@ -1192,6 +1192,11 @@ a {
     margin-bottom: 10px;
 }
 
+.pipeline-card h3 .step-num {
+    color: var(--brand-cyan);
+    margin-right: 4px;
+}
+
 .pipeline-card .pipeline-desc {
     font-size: 12px;
     color: var(--text-secondary);

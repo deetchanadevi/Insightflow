@@ -510,7 +510,6 @@
                     <div class="pipeline-road">
                         <!-- Step 1 -->
                         <div class="pipeline-card">
-                            <div class="pipeline-badge">1</div>
                             <div class="pipeline-icon input-color">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
@@ -520,7 +519,7 @@
                                     <polyline points="10 9 9 9 8 9"></polyline>
                                 </svg>
                             </div>
-                            <h3>1. Data Input Ingestion</h3>
+                            <h3><span class="step-num">1.</span> Data Input Ingestion</h3>
                             <p class="pipeline-desc">Loads historic parameters from CSV uploads or native industry presets. Dates and values are indexed, outliers are smoothed, and timestamps are parsed.</p>
                             <ul class="pipeline-list">
                                 <li>CSV Schema Auto-Mapping</li>
@@ -531,13 +530,12 @@
 
                         <!-- Step 2 -->
                         <div class="pipeline-card">
-                            <div class="pipeline-badge">2</div>
                             <div class="pipeline-icon model-color">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polygon points="5 3 19 12 5 21 5 3"></polygon>
                                 </svg>
                             </div>
-                            <h3>2. Time-Series AI Engine</h3>
+                            <h3><span class="step-num">2.</span> Time-Series AI Engine</h3>
                             <p class="pipeline-desc">Decomposes time-series components into a linear growth trend combined with seasonal multipliers. Evaluates model standard error relative to raw values. <strong>This is a transparent, explainable time-series statistical model (OLS regression + seasonal decomposition), not a black-box model.</strong></p>
                             <ul class="pipeline-list">
                                 <li>Ordinary Least Squares: \( y = mx + c \)</li>
@@ -548,13 +546,12 @@
 
                         <!-- Step 3 -->
                         <div class="pipeline-card">
-                            <div class="pipeline-badge">3</div>
                             <div class="pipeline-icon forecast-color">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
                                 </svg>
                             </div>
-                            <h3>3. Forecast Visualizer</h3>
+                            <h3><span class="step-num">3.</span> Forecast Visualizer</h3>
                             <p class="pipeline-desc">Extrapolates calculated trend patterns into a 6-month forecasting timeline, bounded by a 95% confidence interval shaded band.</p>
                             <ul class="pipeline-list">
                                 <li>Trend Line Projection (Dashed)</li>
@@ -565,7 +562,6 @@
 
                         <!-- Step 4 -->
                         <div class="pipeline-card">
-                            <div class="pipeline-badge">4</div>
                             <div class="pipeline-icon decision-color">
                                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                     <circle cx="12" cy="12" r="10"></circle>
@@ -573,7 +569,7 @@
                                     <line x1="12" y1="8" x2="12.01" y2="8"></line>
                                 </svg>
                             </div>
-                            <h3>4. Prescriptive Decisions</h3>
+                            <h3><span class="step-num">4.</span> Prescriptive Decisions</h3>
                             <p class="pipeline-desc">AI Insight Panel generates contextual instructions based on upcoming slopes. Prescribes optimal order quantities, shift counts, and price hedges.</p>
                             <ul class="pipeline-list">
                                 <li>Safety Stock Buffer Calculations</li>
