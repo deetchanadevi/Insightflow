@@ -10,19 +10,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
     <!-- Chart.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <!-- MathJax Configuration & Library for rendering LaTeX equations -->
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['\\(', '\\)'], ['$', '$']],
-                displayMath: [['\\[', '\\]'], ['$$', '$$']]
-            },
-            options: {
-                enableMenu: false
-            }
-        };
-    </script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -283,6 +270,7 @@
                             <h3 class="module-title">Demand Forecasting</h3>
                             <p class="module-kpi" id="demand-kpi">Calculating...</p>
                             <span class="module-caption" id="demand-change">vs last cycle baseline</span>
+                            <span class="module-accuracy" id="demand-accuracy"></span>
                         </div>
                     </div>
 
@@ -299,6 +287,7 @@
                             <h3 class="module-title">Inventory Forecasting</h3>
                             <p class="module-kpi" id="inventory-kpi">Calculating...</p>
                             <span class="module-caption" id="inventory-change">predicted safety stock</span>
+                            <span class="module-accuracy" id="inventory-accuracy"></span>
                         </div>
                     </div>
 
@@ -316,6 +305,7 @@
                             <h3 class="module-title">Staffing Forecasting</h3>
                             <p class="module-kpi" id="staffing-kpi">Calculating...</p>
                             <span class="module-caption" id="staffing-change">ideal roster capacity</span>
+                            <span class="module-accuracy" id="staffing-accuracy"></span>
                         </div>
                     </div>
 
@@ -333,6 +323,27 @@
                             <h3 class="module-title">Revenue Forecasting</h3>
                             <p class="module-kpi" id="revenue-kpi">Calculating...</p>
                             <span class="module-caption" id="revenue-change">projected next Q total</span>
+                            <span class="module-accuracy" id="revenue-accuracy"></span>
+                        </div>
+                    </div>
+
+                    <div class="module-card" id="card-behavior" data-module="behavior">
+                        <div class="module-card-header">
+                            <div class="module-icon icon-amber">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="9" cy="7" r="4"></circle>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                </svg>
+                            </div>
+                            <span class="card-status-pill amber" id="behavior-status-pill">Stable</span>
+                        </div>
+                        <div class="module-body">
+                            <h3 class="module-title">Customer Retention</h3>
+                            <p class="module-kpi" id="behavior-kpi">Calculating...</p>
+                            <span class="module-caption" id="behavior-change">projected retention rate</span>
+                            <span class="module-accuracy" id="behavior-accuracy"></span>
                         </div>
                     </div>
                 </div>
@@ -380,7 +391,7 @@
                         </div>
                         <div class="insight-body">
                             <p class="insight-text" id="ai-insight-text">
-                                Analyzing historical cycles and computing regression trend patterns. Load a dataset to generate context recommendations.
+                                Demand is projected to peak at <strong>17,500 orders</strong> in Dec due to holiday shopping. Consider pre-ordering inventory buffer of <strong>3,400 units</strong> by late October to avoid stockouts.
                             </p>
                         </div>
                     </div>
@@ -394,6 +405,11 @@
                     <div class="card datalab-controls">
                         <h2>Data Ingestion Engine</h2>
                         <p class="card-subtitle">Load custom files or choose a pre-loaded industry template to simulate historical streams.</p>
+                        
+                        <!-- Inline Error Banner -->
+                        <div id="csv-error-banner" style="display: none; background-color: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 8px; padding: 12px; margin-bottom: 16px; color: #fca5a5; font-size: 0.9rem;">
+                            <strong>Validation Error:</strong> <span id="csv-error-text">Missing required columns.</span>
+                        </div>
                         
                         <!-- Upload Box -->
                         <div class="upload-dropzone" id="csv-dropzone">
@@ -510,7 +526,7 @@
                                 </svg>
                             </div>
                             <h3>2. Time-Series AI Engine</h3>
-                            <p class="pipeline-desc">Decomposes time-series components into a linear growth trend combined with seasonal multipliers. Evaluates model standard error relative to raw values.</p>
+                            <p class="pipeline-desc">Decomposes time-series components into a linear growth trend combined with seasonal multipliers. Evaluates model standard error relative to raw values. <strong>This is a transparent, explainable time-series statistical model (OLS regression + seasonal decomposition), not a black-box model.</strong></p>
                             <ul class="pipeline-list">
                                 <li>Ordinary Least Squares: \( y = mx + c \)</li>
                                 <li>Seasonal Sine Wave Multipliers</li>

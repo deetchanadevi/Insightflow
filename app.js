@@ -48,6 +48,15 @@ const INDUSTRY_PROFILES = {
                 historical: [240000, 231000, 262000, 284000, 276000, 310000, 324000, 318000, 350000],
                 seasonality: [0.95, 0.90, 1.02, 1.05, 1.03, 1.10, 1.12, 1.08, 1.15, 1.18, 1.35, 1.45],
                 insightTemplate: "Quarterly revenue is on an upward trajectory, estimated to hit {PEAK} in Dec. Margins are stable; allocate surplus cash to inventory prepayments."
+            },
+            behavior: {
+                title: "Customer Retention",
+                subtitle: "Predicting repeat buyer retention rates.",
+                unit: "%",
+                kpiCaption: "Projected retention rate",
+                historical: [65.0, 65.5, 66.2, 65.8, 67.1, 68.0, 68.5, 67.8, 69.5],
+                seasonality: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+                insightTemplate: "Retention rates are steadily increasing towards {PEAK}. Consider rolling out the loyalty rewards tier earlier to capitalize on engaged shoppers."
             }
         }
     },
@@ -90,6 +99,15 @@ const INDUSTRY_PROFILES = {
                 historical: [164000, 158000, 170000, 182000, 204000, 230000, 242000, 248000, 210000],
                 seasonality: [0.82, 0.80, 0.90, 0.98, 1.10, 1.25, 1.30, 1.32, 1.05, 0.98, 1.05, 1.15],
                 insightTemplate: "Table revenue is expected to grow, pacing towards {PEAK}. Consider loyalty programs during the Q1 low season to smooth out revenue dips."
+            },
+            behavior: {
+                title: "Diner Retention",
+                subtitle: "Predicting repeat diner loyalty retention.",
+                unit: "%",
+                kpiCaption: "Projected retention rate",
+                historical: [42.0, 41.5, 43.1, 42.8, 44.5, 45.2, 44.8, 45.9, 47.0],
+                seasonality: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+                insightTemplate: "Repeat diner retention is pacing towards {PEAK}. High potential for a subscription-style loyalty offering to lock in summer revenue."
             }
         }
     },
@@ -132,6 +150,15 @@ const INDUSTRY_PROFILES = {
                 historical: [1120000, 1085000, 1137000, 1088000, 1032500, 980000, 962500, 1015000, 1102000],
                 seasonality: [1.18, 1.15, 1.05, 0.98, 0.92, 0.88, 0.86, 0.90, 0.98, 1.04, 1.12, 1.22],
                 insightTemplate: "Cash inflows will peak at {PEAK} in Dec. Deductibles and annual resets will impact Q1 collections; review accounts receivable lag parameters."
+            },
+            behavior: {
+                title: "Patient Retention",
+                subtitle: "Predicting repeat clinic visits & chronic care.",
+                unit: "%",
+                kpiCaption: "Projected retention rate",
+                historical: [88.0, 88.2, 87.9, 88.5, 88.8, 89.1, 89.0, 89.4, 89.8],
+                seasonality: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+                insightTemplate: "Patient network retention is exceptionally stable at {PEAK}. Consider implementing automated follow-up scheduling to preserve this metric."
             }
         }
     },
@@ -174,6 +201,15 @@ const INDUSTRY_PROFILES = {
                 historical: [720000, 735000, 756000, 714000, 768000, 783000, 804000, 726000, 825000],
                 seasonality: [1.02, 1.03, 1.05, 1.02, 1.04, 1.06, 1.08, 0.92, 1.07, 1.08, 1.05, 0.88],
                 insightTemplate: "Contract revenue is steady and pacing toward {PEAK}. Account for the Q4 factory maintenance dip to maintain cash flow covenants."
+            },
+            behavior: {
+                title: "Contract Renewal",
+                subtitle: "Predicting long-term buyer contract renewals.",
+                unit: "%",
+                kpiCaption: "Projected renewal rate",
+                historical: [92.5, 93.0, 92.8, 93.5, 93.2, 94.0, 94.5, 94.1, 95.0],
+                seasonality: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+                insightTemplate: "Client renewal rates remain robust, approaching {PEAK}. Lock in multi-year supplier commitments to secure volume discounts."
             }
         }
     },
@@ -216,6 +252,15 @@ const INDUSTRY_PROFILES = {
                 historical: [1500000, 800000, 600000, 450000, 400000, 350000, 300000, 2200000, 3800000],
                 seasonality: [1.20, 0.95, 0.85, 0.70, 0.60, 0.50, 0.40, 1.50, 1.95, 1.10, 0.90, 1.15],
                 insightTemplate: "Tuition collection will surge to {PEAK} in September. Secure short-term credit facility draws in June/July to bridge the seasonal summer cash dip."
+            },
+            behavior: {
+                title: "Student Retention",
+                subtitle: "Predicting cross-semester student retention.",
+                unit: "%",
+                kpiCaption: "Projected retention rate",
+                historical: [78.0, 78.5, 77.8, 79.1, 79.5, 80.0, 79.8, 80.5, 81.2],
+                seasonality: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+                insightTemplate: "Student retention rates are rising towards {PEAK}. Allocate advising resources to freshman cohorts to prevent early-term dropouts."
             }
         }
     },
@@ -257,6 +302,15 @@ const INDUSTRY_PROFILES = {
                 historical: [180000, 194400, 210000, 217200, 206400, 228000, 234000, 222000, 264000],
                 seasonality: [0.94, 0.92, 1.04, 1.02, 0.98, 1.05, 1.06, 0.95, 1.12, 1.18, 1.30, 1.25],
                 insightTemplate: "LTV-driven revenue is pacing towards {PEAK}. Standard cohort churn analysis shows strong Q4 user retention; focus upsell programs on SaaS buyers."
+            },
+            behavior: {
+                title: "Audience Retention",
+                subtitle: "Predicting mailing list and ad audience retention.",
+                unit: "%",
+                kpiCaption: "Projected retention rate",
+                historical: [35.0, 36.5, 34.8, 37.2, 36.9, 38.5, 39.0, 38.2, 40.1],
+                seasonality: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+                insightTemplate: "Audience retention is growing towards {PEAK}. Target re-engagement campaigns in Q3 to optimize lead conversion rates."
             }
         }
     },
@@ -298,6 +352,15 @@ const INDUSTRY_PROFILES = {
                 historical: [360000, 390000, 420000, 440000, 430000, 460000, 480000, 470000, 510000],
                 seasonality: [0.96, 0.94, 1.02, 1.01, 0.98, 1.04, 1.05, 0.97, 1.08, 1.10, 1.15, 1.12],
                 insightTemplate: "MRR is projected to scale to {PEAK}. Enterprise billing cycles in December are expected to increase average invoice values by 18%."
+            },
+            behavior: {
+                title: "Net Retention Rate",
+                subtitle: "Predicting SaaS NRR and account churn.",
+                unit: "%",
+                kpiCaption: "Projected NRR",
+                historical: [105.0, 106.2, 105.8, 107.1, 107.5, 108.0, 107.9, 108.5, 109.2],
+                seasonality: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0],
+                insightTemplate: "Net Retention Rate is accelerating to {PEAK}. Enterprise expansion is outpacing SMB churn. Deploy account management teams to upsell remaining SMBs."
             }
         }
     }
@@ -404,11 +467,6 @@ function switchTab(tabKey) {
         updateAIInsight();
     } else if (tabKey === "datalab") {
         updateDataLabPreview();
-    }
-
-    // Trigger MathJax rendering if LaTeX formulas are present on screen
-    if (window.MathJax && window.MathJax.typesetPromise) {
-        window.MathJax.typesetPromise().catch(err => console.log('MathJax error:', err));
     }
 
     // Scroll back to top
@@ -582,7 +640,8 @@ function handleCSVFile(file) {
 function parseCSVData(rawText, fileName) {
     const lines = rawText.split(/\r?\n/);
     if (lines.length < 3) {
-        showToast("Dataset contains insufficient rows to build forecast models.", "warning");
+        document.getElementById("csv-error-banner").style.display = "block";
+        document.getElementById("csv-error-text").textContent = "Dataset contains insufficient rows to build forecast models.";
         return;
     }
 
@@ -591,18 +650,29 @@ function parseCSVData(rawText, fileName) {
 
     // Parse header and look for column indices
     const headers = lines[0].split(",");
-    let dateColIdx = 0;
-    let valColIdx = 1;
-
     // Scan headers to automatically map Date and Value columns
+    let dateColIdx = -1;
+    let valColIdx = -1;
+
     headers.forEach((h, idx) => {
         const norm = h.toLowerCase().trim();
         if (norm.includes("date") || norm.includes("month") || norm.includes("year") || norm.includes("period") || norm.includes("time")) {
             dateColIdx = idx;
-        } else if (norm.includes("value") || norm.includes("sales") || norm.includes("amount") || norm.includes("quantity") || norm.includes("count") || norm.includes("revenue") || norm.includes("admissions") || norm.includes("load")) {
+        } else if (norm.includes("value") || norm.includes("sales") || norm.includes("amount") || norm.includes("quantity") || norm.includes("count") || norm.includes("revenue") || norm.includes("admissions") || norm.includes("load") || norm.includes("demand")) {
             valColIdx = idx;
         }
     });
+
+    if (valColIdx === -1 && headers.length === 2) {
+        dateColIdx = 0;
+        valColIdx = 1;
+    }
+
+    if (dateColIdx === -1 || valColIdx === -1) {
+        document.getElementById("csv-error-banner").style.display = "block";
+        document.getElementById("csv-error-text").textContent = "Could not map columns. CSV must contain a date column and a numeric value column.";
+        return;
+    }
 
     // Parse remaining data records
     for (let i = 1; i < lines.length; i++) {
@@ -624,9 +694,12 @@ function parseCSVData(rawText, fileName) {
     }
 
     if (parsedLabels.length < 4) {
-        showToast("Parsed less than 4 data points. Linear trend lines require more inputs.", "warning");
+        document.getElementById("csv-error-banner").style.display = "block";
+        document.getElementById("csv-error-text").textContent = "Parsed less than 4 data points. Linear trend lines require more inputs.";
         return;
     }
+
+    document.getElementById("csv-error-banner").style.display = "none";
 
     // Cache to state
     customDataset.hasData = true;
@@ -981,43 +1054,12 @@ function updateAIInsight() {
 }
 
 // ==========================================================================
-// 8.5 Dynamic Theme Accent Color Control
-// ==========================================================================
-
-function updateThemeColors(moduleName) {
-    let accent = "#06b6d4";
-    let glow = "rgba(6, 182, 212, 0.15)";
-    let glowUltraLow = "rgba(6, 182, 212, 0.02)";
-    
-    if (moduleName === "inventory") {
-        accent = "#8b5cf6";
-        glow = "rgba(139, 92, 246, 0.15)";
-        glowUltraLow = "rgba(139, 92, 246, 0.02)";
-    } else if (moduleName === "staffing") {
-        accent = "#10b981";
-        glow = "rgba(16, 185, 129, 0.15)";
-        glowUltraLow = "rgba(16, 185, 129, 0.02)";
-    } else if (moduleName === "revenue") {
-        accent = "#f43f5e";
-        glow = "rgba(244, 63, 94, 0.15)";
-        glowUltraLow = "rgba(244, 63, 94, 0.02)";
-    }
-    
-    document.documentElement.style.setProperty('--theme-accent', accent);
-    document.documentElement.style.setProperty('--theme-accent-glow', glow);
-    document.documentElement.style.setProperty('--theme-accent-glow-ultra-low', glowUltraLow);
-}
-
-// ==========================================================================
 // 9. UI State Syncer & Data Previews
 // ==========================================================================
 
 function updateApplicationState() {
-    // Dynamic theme color update matching the active module
-    updateThemeColors(activeModule);
-
-    // 1. Calculate values for 4 Module Cards
-    const modules = ["demand", "inventory", "staffing", "revenue"];
+    // 1. Calculate values for 5 Module Cards
+    const modules = ["demand", "inventory", "staffing", "revenue", "behavior"];
     
     modules.forEach(mod => {
         const conf = INDUSTRY_PROFILES[activeIndustry].modules[mod];
@@ -1034,6 +1076,13 @@ function updateApplicationState() {
         // Update Card KPIs
         const kpiEl = document.getElementById(`${mod}-kpi`);
         kpiEl.textContent = formatMetricUnit(nextValue, conf.unit);
+        
+        // Update accuracy metric span
+        const accuracyEl = document.getElementById(`${mod}-accuracy`);
+        if (accuracyEl) {
+            const marginOfError = predictions.mean !== 0 ? ((predictions.standardError / predictions.mean) * 100).toFixed(1) : 0;
+            accuracyEl.textContent = `±${marginOfError}% margin`;
+        }
         
         // Update captions
         const changeEl = document.getElementById(`${mod}-change`);
