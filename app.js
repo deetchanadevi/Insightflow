@@ -406,6 +406,11 @@ function switchTab(tabKey) {
         updateDataLabPreview();
     }
 
+    // Trigger MathJax rendering if LaTeX formulas are present on screen
+    if (window.MathJax && window.MathJax.typesetPromise) {
+        window.MathJax.typesetPromise().catch(err => console.log('MathJax error:', err));
+    }
+
     // Scroll back to top
     document.querySelector(".main-content").scrollTop = 0;
 }
@@ -976,10 +981,41 @@ function updateAIInsight() {
 }
 
 // ==========================================================================
+// 8.5 Dynamic Theme Accent Color Control
+// ==========================================================================
+
+function updateThemeColors(moduleName) {
+    let accent = "#06b6d4";
+    let glow = "rgba(6, 182, 212, 0.15)";
+    let glowUltraLow = "rgba(6, 182, 212, 0.02)";
+    
+    if (moduleName === "inventory") {
+        accent = "#8b5cf6";
+        glow = "rgba(139, 92, 246, 0.15)";
+        glowUltraLow = "rgba(139, 92, 246, 0.02)";
+    } else if (moduleName === "staffing") {
+        accent = "#10b981";
+        glow = "rgba(16, 185, 129, 0.15)";
+        glowUltraLow = "rgba(16, 185, 129, 0.02)";
+    } else if (moduleName === "revenue") {
+        accent = "#f43f5e";
+        glow = "rgba(244, 63, 94, 0.15)";
+        glowUltraLow = "rgba(244, 63, 94, 0.02)";
+    }
+    
+    document.documentElement.style.setProperty('--theme-accent', accent);
+    document.documentElement.style.setProperty('--theme-accent-glow', glow);
+    document.documentElement.style.setProperty('--theme-accent-glow-ultra-low', glowUltraLow);
+}
+
+// ==========================================================================
 // 9. UI State Syncer & Data Previews
 // ==========================================================================
 
 function updateApplicationState() {
+    // Dynamic theme color update matching the active module
+    updateThemeColors(activeModule);
+
     // 1. Calculate values for 4 Module Cards
     const modules = ["demand", "inventory", "staffing", "revenue"];
     
